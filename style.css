@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --fontLogo: "Asimovian", sans serif;
+    --bodyFont: "Arimo", sans serif;
+    --bg: #491306;
+    --ColorWhite: #fff;
+    --colorYellow: #f77802c5;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: var(--bodyFont);
+    color: var(--ColorWhite);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+    border-bottom: 1px solid #6868;
+    /* position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%; */
+    background-color: #000000;
+}
+
+header .logo h1 {
+    font-size: 3rem;
+    font-family: var(--fontLogo);
+}
+
+#logo {
+    font-size: 3rem;
+    margin-top: 0.3rem;
+    transform: rotate(20deg);
+    color: var(--colorYellow);
+    color: var(--colorYellow);
+}
+
+header .navbar a {
+    color: var(--ColorWhite);
+    font-size: 1.5rem;
+    margin-right: 3rem;
+}
+
+header .navbar a {
+    color: var(--ColorWhite);
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--colorYellow);
+    transition: 0.3s ease;
+}
+
+header .navbar a:hover {
+    color: var(--colorYellow);
+}
+
+header .navbar a:hover::after {
+    width: 100%;
+}
+
+#headIcon {
+    font-size: 3rem;
+    transition: 0.3s ease;
+
+}
+
+#headIcon:hover {
+    color: var(--colorYellow);
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+#headIcon:nth-child(2) {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+main .maintext h1 {
+    text-align: center;
+    font-size: clamp(1rem, 12vw, 18rem);
+    line-height: 1.1;
+}
+
+main .maintext {
+    flex: 1 1 30%;
+}
+
+main .maintext P {
+    text-align: center;
+    font-family: "Epunda Slab", sans-serif;
+    font-size: 1.4rem;
+}
+
+main .maintext main .mainimg {
+    flex: 1 1 70%;
+}
+
+main .mainimg img {
+    width: 100%;
+}
+
+main .maintext .o {
+    color: var(--colorYellow);
+}
+
+@media screen and (max-width: 728px) {
+    header {
+        position: relative;
+    }
+
+    #headIcon:nth-child(2) {
+        display: block;
+    }
+
+    .navicon {
+        display: inline-flex;
+        gap: 2rem;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 101%;
+        right: -100%;
+        display: flex;
+        color: #000;
+        flex-direction: column;
+        background-color: #000000;
+        width: 25%;
+        height: 20vh;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 2000;
+        transition: right 0.4s ease;
+    }
+
+    header .navbar.active {
+        right: 0%;
+    }
+
+
+    header .navbar a {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-right: 3rem;
+    }
+
+    header .navbar a::after {
+        background-color: #fff;
+    }
+
+    header .navbar a:hover {
+        color: var(--colorYellow);
+    }
+
+
+    header .navbar a:hover::after {
+        width: 100%;
+    }
+
+    #headIcon {
+        display: block;
+    }
+
+
+}
+
+@media screen and (max-width: 382px) {
+
+    .navicon {
+        display: block;
+    }
+
+    header {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #6868;
+        /* position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%; */
+
+    }
+
+    header .navbar {
+
+        width: 90%;
+
+    }
+
+}
