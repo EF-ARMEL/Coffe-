@@ -36,16 +36,16 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 2rem 5rem;
     border-bottom: 1px solid #6868;
-    /* position: fixed;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1000;
-    width: 100%; */
+    width: 100%;
     background-color: #000000;
 }
 
@@ -116,7 +116,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6rem;
+    margin-top: 13rem;
 }
 
 main .maintext h1 {
@@ -141,11 +141,15 @@ main .maintext P {
 
 main .maintext main .mainimg {
     flex: 1 1 70%;
+    position: relative;
 }
 
 main .mainimg img {
     width: 100%;
+    animation: img 6s ease forwards;
+    opacity: 0;
 }
+
 
 main .maintext .o {
     color: var(--colorYellow);
@@ -234,8 +238,8 @@ h1 {
 }
 
 .menu .cart .plat img {
-    height: 120px;
-    width: 120px;
+    height: 12rem;
+    width: 12rem;
     background-color: var(--colorYellow);
     padding: 1.6rem;
     border-radius: 50%;
@@ -243,10 +247,9 @@ h1 {
 
 }
 
-.menu .cart .prise {}
 
 .menu .cart .prise .value {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #797979;
     font-family: "Bebas Neue", sans-serif;
 
@@ -257,25 +260,75 @@ h1 {
     line-height: 1.3;
 }
 
-.menu .menufoot {
+.footmenu {
     margin-top: 10rem;
+    text-align: center;
+    font-family: var(--bodyFont);
+    font-size: 2rem;
+
+}
+
+.footmenu .masterchef {
+    height: 2rem;
+    display: inline-block;
+    width: 14rem;
+    border: 1px solid #fff;
+    padding: 1rem;
+    outline: none;
+    border-radius: 5rem;
+    color: var(--ColorWhite);
+    background-color: var(--colorYellow);
+    box-shadow: rgba(248, 248, 250, 0.25) 0px 50px 100px -20px, rgba(231, 231, 231, 0.3) 0px 30px 60px -30px, rgba(247, 247, 248, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+.citation {
     display: flex;
     justify-content: center;
-    align-content: center;
+    position: relative;
 }
 
-.menu .menufoot .footOrang {
-    display: inline-block;
-    height: 20px;
-    width: 100px;
-    border: 1px solid #fff;
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 10px;
-    background-color: var(--colorYellow);
-    border-radius: 30px;
+#format_quote {
+    font-size: 10rem;
+    background-color: var(--ColorWhite);
+    width: 20rem;
+    height: 16rem;
+    border: 2px solid #fff;
+    z-index: 2000;
+    color: var(--colorYellow);
+    position: absolute;
+    top: -4rem;
+    border-radius: 5rem;
+
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes img {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
 
 @keyframes change {
     0% {
@@ -291,9 +344,19 @@ h1 {
     }
 }
 
+@media screen and (max-width: 934px) {
+    .navicon {
+        margin-right: 5rem;
+    }
+}
+
+
 @media screen and (max-width: 728px) {
     header {
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
     }
 
     #headIcon:nth-child(2) {
@@ -349,10 +412,6 @@ h1 {
         display: block;
     }
 
-
-}
-
-@media screen and (max-width: 728px) {
     main {
         flex-direction: column;
         gap: 2rem;
@@ -381,12 +440,12 @@ h1 {
         align-items: center;
         padding: 1rem 2rem;
         border-bottom: 1px solid #6868;
-        /* position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%; */
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
 
     }
 
