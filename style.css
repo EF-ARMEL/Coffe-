@@ -32,6 +32,31 @@ body {
     font-family: var(--bodyFont);
     color: var(--ColorWhite);
     box-sizing: border-box;
+    cursor: none;
+}
+
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width .25s ease, height .25s ease, background .25s ease, border .25s ease;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    /* effet stylé comme Crafto */
+}
+
+.cursor.active {
+    width: 40px;
+    height: 40px;
+    background: rgba(167, 139, 250, 0.15);
+    border-color: transparent;
 }
 
 header {
@@ -90,6 +115,7 @@ header .navbar a::after {
 
 header .navbar a:hover {
     color: var(--colorYellow);
+    cursor: none;
 }
 
 header .navbar a:hover::after {
@@ -105,7 +131,7 @@ header .navbar a:hover::after {
 #headIcon:hover {
     color: var(--colorYellow);
     transform: scale(1.3);
-    cursor: pointer;
+
 }
 
 #headIcon:nth-child(2) {
@@ -387,6 +413,14 @@ h1 {
         margin-right: 5rem;
     }
 }
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 728px) {

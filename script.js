@@ -10,4 +10,12 @@ menu.addEventListener("click", () => {
         menu.textContent = "menu";
     }
 });
+const cursor = document.getElementById('cursor');
+let mouseX = 0, mouseY = 0;
 
+// suivre la souris
+window.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursor.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+});
