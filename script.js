@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Configuration responsive
         breakpoints: {
-            346: {
+            304: {
                 slidesPerView: 1,
                 spaceBetween: 5,
             },
