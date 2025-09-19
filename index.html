@@ -49,7 +49,6 @@
             <img src="images/coffee-hero-section.png" alt="">
         </div>
     </main>
-    <script src="script.js"></script>
     <section class="menu">
 
         <h2 class="redtext">- CHOISISSEZ LE DÉLICIEUX -</h2>
@@ -91,55 +90,67 @@
                 </div>
             </div>
         </div>
-        <div class="mainCart">
-            <div class="cart">
-                <div class="plat"><img src="images/burger-frenchfries.png" alt=""></div>
-                <div class="prise">
-                    <h1>burger------------------------------------------ <span class="value">200€</span>
-                    </h1>
-                </div>
-            </div>
 
-            <div class="cart">
-                <div class="plat"><img src="images/cold-beverages.png" alt=""></div>
-                <div class="prise">
-                    <h1>burger------------------------------------------ <span class="value">200€</span>
-                    </h1>
-                </div>g
-            </div>
-
-            <div class="cart">
-                <div class="plat"><img src="images/hot-beverages.png" alt=""></div>
-                <div class="prise">
-                    <h1>burger------------------------------------------ <span class="value">200€</span>
-                    </h1>
+        <div class="swiper-container">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"> 
+                        <img src="images/burger-frenchfries.png" alt="">
+                        <div class="cart-content">
+                            <h3>Burger</h3>
+                            <span class="pris">200€</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                        <img src="images/hot-beverages.png" alt="">
+                        <div class="cart-content">
+                            <h3>Boisson chaude</h3>
+                            <span class="pris">150€</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                        <img src="images/cold-beverages.png" alt="">
+                        <div class="cart-content">
+                            <h3>Boisson froide</h3>
+                            <span class="pris">120€</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                        <img src="images/desserts.png" alt="">
+                        <div class="cart-content">
+                            <h3>Dessert</h3>
+                            <span class="pris">180€</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                        <img src="images/refreshment.png" alt="">
+                        <div class="cart-content">
+                            <h3>Rafraîchissement</h3>
+                            <span class="pris">100€</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"> 
+                        <img src="images/special-combo.png" alt="">
+                        <div class="cart-content">
+                            <h3>Combo spécial</h3>
+                            <span class="pris">300€</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-            <div class="cart">
-                <div class="plat"><img src="images/special-combo.png" alt=""></div>
-                <div class="prise">
-                    <h1>burger------------------------------------------ <span class="value">200€</span>
-                    </h1>
-                </div>
-            </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
-            <div class="cart">
-                <div class="plat"><img src="images/desserts.png" alt=""></div>
-                <div class="prise">
-                    <h1>burger------------------------------------------ <span class="value">200€</span>
-                    </h1>
-                </div>
-            </div>
-
-            <div class="cart">
-                <div class="plat"><img src="images/refreshment.png" alt=""></div>
-                <div class="prise">
-                    <h1>burger------------------------------------------ <span class="value">200€</span>
-                    </h1>
-                </div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
         </div>
+
         <p class="footmenu"><span class="masterchef">MasterChef</span>
             la signature des meilleurs chefs cuisiniers du monde</p>
     </section>

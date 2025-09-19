@@ -10,7 +10,7 @@
     --bodyFont: "Arimo", sans serif;
     --bg: #491306;
     --ColorWhite: #fff;
-    --colorYellow: #f77802c5;
+    --colorYellow: #d66a069f;
 }
 
 html {
@@ -32,7 +32,7 @@ body {
     font-family: var(--bodyFont);
     color: var(--ColorWhite);
     box-sizing: border-box;
-    cursor: none;
+
     scroll-behavior: smooth;
     margin-bottom: 10rem;
 
@@ -246,48 +246,68 @@ h1 {
 
 }
 
-.menu .mainCart {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 2rem;
-    margin-left: 100px;
-}
-
-.menu .mainCart .cart {
+.swiper-container {
+    width: 100%;
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: 0.3s ease;
-
+    justify-content: center;
+    margin: 5rem 0;
 }
 
-.menu .mainCart .cart:hover {
-    transform: scale(1.3);
-    transform: translateX(1.4rem);
+.swiper {
+    width: clamp(30rem, 80vw, 90rem);
+    height: 50rem;
+    overflow: hidden;
 }
 
-.menu .cart .plat img {
-    height: 12rem;
-    width: 12rem;
-    background-color: var(--colorYellow);
-    padding: 1.6rem;
-    border-radius: 50%;
-    border: 1px solid #797979;
-
+.swiper .swiper-slide {
+    background-color: #fff;
+    border-radius: 2rem;
+    color: #000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    text-align: center;
 }
 
-
-.menu .cart .prise .value {
-    font-size: 3rem;
-    color: #797979;
-    font-family: "Bebas Neue", sans-serif;
-
+.swiper .swiper-slide img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
 }
 
-.menu .cart .prise h1 {
-    font-size: 1.6rem;
-    line-height: 1.3;
+.swiper .swiper-slide .cart-content {
+    padding: 2rem;
 }
+
+.swiper .swiper-slide .cart-content h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.swiper .swiper-slide .pris {
+    display: block;
+    border: 1px solid black;
+    font-size: 4rem;
+}
+
+/* Styles pour les boutons de navigation */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--colorYellow);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 2rem;
+}
+
+/* Styles pour la pagination */
+.swiper-pagination-bullet {
+    background: var(--colorYellow);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--ColorWhite);
+}
+
 
 .footmenu {
     margin-top: 10rem;
