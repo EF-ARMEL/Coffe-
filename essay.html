@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Coverflow Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #6daafc;
+            /* ton bleu */
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 900px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background: #fff;
+            border-radius: 16px;
+            text-align: center;
+            font-family: sans-serif;
+            overflow: hidden;
+            width: 280px;
+            /* largeur fixe pour chaque card */
+            height: 400px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+
+        .card-content h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .card-content button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/special-combo.png" alt="New York">
+                <div class="card-content">
+                    <h3>New York</h3>
+                    <p>5 NIGHT / 6 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/burger-frenchfries.png" alt="Singapore">
+                <div class="card-content">
+                    <h3>Singapore</h3>
+                    <p>3 NIGHT / 4 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/cold-beverages.png" alt="bai">
+                <div class="card-content">
+                    <h3>Dubai</h3>
+                    <p>5 NIGHT / 6 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/special-combo.png" alt="New York">
+                <div class="card-content">
+                    <h3>New York</h3>
+                    <p>5 NIGHT / 6 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/special-combo.png" alt="New York">
+                <div class="card-content">
+                    <h3>New York</h3>
+                    <p>5 NIGHT / 6 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/special-combo.png" alt="New York">
+                <div class="card-content">
+                    <h3>New York</h3>
+                    <p>5 NIGHT / 6 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/special-combo.png" alt="New York">
+                <div class="card-content">
+                    <h3>New York</h3>
+                    <p>5 NIGHT / 6 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/special-combo.png" alt="New York">
+                <div class="card-content">
+                    <h3>New York</h3>
+                    <p>5 NIGHT / 6 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/special-combo.png" alt="New York">
+                <div class="card-content">
+                    <h3>New York</h3>
+                    <p>5 NIGHT / 6 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/special-combo.png" alt="New York">
+                <div class="card-content">
+                    <h3>New York</h3>
+                    <p>5 NIGHT / 6 DAYS</p>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+            <!-- Tu peux ajouter d'autres slides -->
+        </div>
+
+        <!-- Pagination et boutons -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "3",
+            loop: true,
+
+            initialSlide: 2,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+
+</html>
