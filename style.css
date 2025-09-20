@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
     --fontLogo: "Asimovian", sans serif;
@@ -272,7 +273,6 @@ h1 {
 
 .swiper {
     width: 60%;
-    height: 50rem;
     overflow: hidden;
 }
 
@@ -305,6 +305,7 @@ h1 {
     margin: 1rem 0;
 }
 
+/* style pour le contenus des cart */
 .swiper .swiper-slide .pris {
     display: block;
     border: 1px solid black;
@@ -335,23 +336,16 @@ h1 {
 .footmenu {
     margin-top: 10rem;
     text-align: center;
-    font-family: var(--bodyFont);
-    font-size: 2rem;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 1.3rem;
+
 
 }
 
 .footmenu .masterchef {
-    height: 2rem;
-    display: inline-block;
-    width: 14rem;
-    border: 1px solid #fff;
     padding: 1rem;
-    outline: none;
-    border-radius: 5rem;
-    color: var(--ColorWhite);
-    background-color: var(--colorYellow);
-    box-shadow: rgba(248, 248, 250, 0.25) 0px 50px 100px -20px, rgba(231, 231, 231, 0.3) 0px 30px 60px -30px, rgba(247, 247, 248, 0.35) 0px -2px 6px 0px inset;
-
+    color: var(--colorYellow);
+    font-family: "Playfair Display", sans-serif;
 }
 
 .citation {
@@ -459,12 +453,18 @@ h1 {
 
 
 @media screen and (max-width: 382px) {
+
+    .swiper .swiper-slide .cart-content {
+        padding: 1rem;
+    }
+
     main {
         margin-top: 8rem;
     }
 
     .navicon {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     header {
@@ -501,7 +501,7 @@ h1 {
 
 
 
-@media screen and (max-width: 728px) {
+@media screen and (max-width: 934px) {
     header {
         position: relative;
         display: flex;
@@ -577,7 +577,7 @@ h1 {
     }
 }
 
-@media screen and (max-width: 934px) {
+/* @media screen and (max-width: 934px) {
     .navicon {
         margin-right: 5rem;
     }
@@ -587,4 +587,5 @@ h1 {
         width: 100%;
 
     }
-}
+
+} */
