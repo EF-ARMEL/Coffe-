@@ -1,201 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Coverflow Slider</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
+    <title>Application Météo</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to top, #4d91bb, #f0f0f0);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #6daafc;
-            /* ton bleu */
+            margin: 0;
         }
 
-        .swiper {
-            width: 100%;
-            max-width: 900px;
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
-
-        .swiper-slide {
-            background: #fff;
-            border-radius: 16px;
+        .container {
             text-align: center;
-            font-family: sans-serif;
-            overflow: hidden;
-            width: 280px;
-            /* largeur fixe pour chaque card */
-            height: 400px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
         }
 
-        .swiper-slide img {
-            width: 100%;
-            height: 60%;
-            object-fit: cover;
+        input {
+            padding: 8px;
+            margin: 10px 0;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        .card-content {
-            padding: 10px;
-        }
-
-        .card-content h3 {
-            margin: 10px 0 5px;
-            font-size: 18px;
-        }
-
-        .card-content p {
-            font-size: 14px;
-            color: #444;
-            margin-bottom: 10px;
-        }
-
-        .card-content button {
-            padding: 8px 16px;
+        button {
+            padding: 10px 15px;
             border: none;
-            border-radius: 8px;
-            background: #007bff;
+            background: #007BFF;
             color: white;
+            border-radius: 5px;
             cursor: pointer;
         }
 
-        .swiper-button-prev,
-        .swiper-button-next {
-            color: white;
+        button:hover {
+            background: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
+    <div class="container">
+        <h1>🌤️ Application Météo</h1>
+        <input type="text" id="city" placeholder="Entrez une ville...">
+        <button onclick="getWeather()">Rechercher</button>
 
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/special-combo.png" alt="New York">
-                <div class="card-content">
-                    <h3>New York</h3>
-                    <p>5 NIGHT / 6 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/burger-frenchfries.png" alt="Singapore">
-                <div class="card-content">
-                    <h3>Singapore</h3>
-                    <p>3 NIGHT / 4 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/cold-beverages.png" alt="bai">
-                <div class="card-content">
-                    <h3>Dubai</h3>
-                    <p>5 NIGHT / 6 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/special-combo.png" alt="New York">
-                <div class="card-content">
-                    <h3>New York</h3>
-                    <p>5 NIGHT / 6 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/special-combo.png" alt="New York">
-                <div class="card-content">
-                    <h3>New York</h3>
-                    <p>5 NIGHT / 6 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/special-combo.png" alt="New York">
-                <div class="card-content">
-                    <h3>New York</h3>
-                    <p>5 NIGHT / 6 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/special-combo.png" alt="New York">
-                <div class="card-content">
-                    <h3>New York</h3>
-                    <p>5 NIGHT / 6 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/special-combo.png" alt="New York">
-                <div class="card-content">
-                    <h3>New York</h3>
-                    <p>5 NIGHT / 6 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/special-combo.png" alt="New York">
-                <div class="card-content">
-                    <h3>New York</h3>
-                    <p>5 NIGHT / 6 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/special-combo.png" alt="New York">
-                <div class="card-content">
-                    <h3>New York</h3>
-                    <p>5 NIGHT / 6 DAYS</p>
-                    <button>VIEW MORE</button>
-                </div>
-            </div>
-            <!-- Tu peux ajouter d'autres slides -->
+        <div id="result">
+            <!-- Les infos météo s’affichent ici -->
         </div>
-
-        <!-- Pagination et boutons -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "3",
-            loop: true,
+    <script>// script.js
 
-            initialSlide: 2,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 200,
-                modifier: 1,
-                slideShadows: true,
-            },
+        async function getWeather() {
+            const apiKey = "32a57c65229f71804562de5c629f79b7"; // ⚠️ remplace par ta clé OpenWeatherMap
+            const city = document.getElementById("city").value;
+            const resultDiv = document.getElementById("result");
 
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+            if (city === "") {
+                resultDiv.innerHTML = "<p style='color:red'>⚠️ Entrez une ville !</p>";
+                return;
+            }
 
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+            try {
+                const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=fr&units=metric`;
+
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    throw new Error("Ville introuvable !");
+                }
+
+                const data = await response.json();
+
+                // Extraire les infos utiles
+                const name = data.name;
+                const temp = data.main.temp;
+                const weather = data.weather[0].description;
+                const icon = data.weather[0].icon;
+
+                // Afficher dans le HTML
+                resultDiv.innerHTML = `
+      <h2>${name}</h2>
+      <p><img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${weather}"></p>
+      <p><b>Température :</b> ${temp}°C</p>
+      <p><b>Météo :</b> ${weather}</p>
+    `;
+            } catch (error) {
+                resultDiv.innerHTML = `<p style="color:red">❌ ${error.message}</p>`;
+            }
+        }
+        const fruits = ["pomme", "banane", "orange"];
+
+        fruits.forEach(function (fruit, index) {
+            console.log(index, fruit);
         });
-    </script>
 
+        const url = 'https://api.adviceslip.com/advice';
+        fetch(url)
+            .then(reponses => reponsess.json())
+            .then(data => {
+                let adviElment = document.createElement('p');
+                adviElment.textContent = 'conseil du jour :"${data.slip.advice}"';
+                document.body.appendChild(adviElment);
+                console.log(reponses);
+
+            })
+    </script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -51,46 +51,47 @@
     </main>
     <section class="menu">
 
-        <h2 class="redtext">- Savourez le meilleur. -</h2>
+        <h2 class="redtext">- Savourez le meilleur-</h2>
         <h1 class="bigtext"> NOS MENU POPULAIRE</h1>
-        <div class="menuicon">
-            <div class="contentIcon">
-                <div class="icon">
-                    <span class="material-symbols-outlined" id="menuicon"> beer_meal</span>
+        <div data-aos="zoom-out-up">
+            <div class="menuicon">
+                <div class="contentIcon">
+                    <div class="icon">
+                        <span class="material-symbols-outlined" id="menuicon"> beer_meal</span>
+                    </div>
+                    <div class="texticon">
+                        <a href="">Boissons</a>
+                    </div>
                 </div>
-                <div class="texticon">
-                    <a href="">Boissons</a>
-                </div>
-            </div>
 
-            <div class="contentIcon">
-                <div class="icon">
-                    <span class="material-symbols-outlined" id="menuicon">japanese_curry</span>
+                <div class="contentIcon">
+                    <div class="icon">
+                        <span class="material-symbols-outlined" id="menuicon">japanese_curry</span>
+                    </div>
+                    <div class="texticon">
+                        <a href="">Végétarien</a>
+                    </div>
                 </div>
-                <div class="texticon">
-                    <a href="">Végétarien</a>
-                </div>
-            </div>
 
-            <div class="contentIcon">
-                <div class="icon">
-                    <span class="material-symbols-outlined" id="menuicon">fastfood</span>
+                <div class="contentIcon">
+                    <div class="icon">
+                        <span class="material-symbols-outlined" id="menuicon">fastfood</span>
+                    </div>
+                    <div class="texticon">
+                        <a href="">Fast-food</a>
+                    </div>
                 </div>
-                <div class="texticon">
-                    <a href="">Fast-food</a>
-                </div>
-            </div>
 
-            <div class="contentIcon">
-                <div class="icon">
-                    <span class="material-symbols-outlined" id="menuicon">bakery_dining</span>
-                </div>
-                <div class="texticon">
-                    <a href="">patisserie</a>
+                <div class="contentIcon">
+                    <div class="icon">
+                        <span class="material-symbols-outlined" id="menuicon">bakery_dining</span>
+                    </div>
+                    <div class="texticon">
+                        <a href="">patisserie</a>
+                    </div>
                 </div>
             </div>
         </div>
-
 
         <div class="swiper">
             <!-- Additional required wrapper -->
@@ -139,14 +140,14 @@
                     </div>
                 </div>
             </div>
-            <!-- If we need pagination -->
+
             <div class="swiper-pagination"></div>
 
-            <!-- If we need navigation buttons -->
+
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
 
-            <!-- If we need scrollbar -->
+
             <div class="swiper-scrollbar"></div>
 
         </div>
@@ -173,6 +174,10 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

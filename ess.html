@@ -4,102 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="ess.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
     <title>Document</title>
 </head>
 
 <body>
-    <!-- Slider main container -->
-    <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <div class="swiper-container"><img src="images/desserts.png" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-content"><img src="images/cold-beverages.png" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-content"><img src="images/refreshment.png" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-content"><img src="images/special-combo.png" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-content"><img src="images/user-4.jpg" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-content"><img src="images/user-2.jpg" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-content"><img src="images/user-1.jpg" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="swiper-content"><img src="images/user-3.jpg" alt=""></div>
-            </div>
-        </div>
-
-        <div class="swiper-pagination"></div>
-
-
-        <div class="swiper-button-prev">
-            <i class="ri-arrow-left-line"></i>
-        </div>
-        <div class="swiper-button-next"><i class="ri-arrow-right-line"></i></div>
-
-
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            effect: coverflow,
-            grabCursor: true,
-            centrereslides: true,
-            coverflowEffect: {
-                rotate: 0,
-                strech: 0,
-                depth: 100,
-                modifier: 1.4,
-                slideShadows: true,
+        const url = 'https://restcountries.com/v3.1/all';
+        const tab = [];
+        fetch(url)
+            .then(blob => blob.json())
+            .then(data => tab.push(...data))
+        console.log(tab);
 
-            },
-            loop: true,
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            keyboard: {
-                enabled: true
-
-            },
-            mousewheel: {
-                threshoDelta: 70
-            },
-            breakpoints: {
-                560: {
-                    slidesPerview: 2.5
-                },
-                768: {
-                    slidesPerview: 3
-                },
-                1024: {
-                    slidesPerview: 3
-                }
-            }
-
-        });
     </script>
 </body>
 
